@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate.cfg.xml/Hibernate driver - HotelMIS@localhost [2]">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="HotelMIS">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="borgert"/>
+    <schema id="4" parent="1" name="CMS"/>
+    <schema id="5" parent="1" name="codehaoshi"/>
+    <schema id="6" parent="1" name="Homework"/>
+    <schema id="7" parent="1" name="Homework2"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="mysql"/>
+    <schema id="10" parent="1" name="performance_schema"/>
+    <schema id="11" parent="1" name="sys"/>
+    <table id="12" parent="2" name="Account"/>
+    <table id="13" parent="2" name="Hotel"/>
+    <table id="14" parent="2" name="Orders"/>
+    <table id="15" parent="2" name="Room"/>
+    <column id="16" parent="12" name="uid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="12" name="pwd">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="12" name="uname">
+      <Position>3</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="19" parent="12" name="tel">
+      <Position>4</Position>
+      <DataType>char(11)|0</DataType>
+    </column>
+    <column id="20" parent="12" name="log_date">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="12" name="type">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="22" parent="12" name="Account_id_uindex">
+      <ColNames>uid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="23" parent="12" name="PRIMARY">
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="24" parent="12" name="Account_id_uindex">
+      <ColNames>uid</ColNames>
+      <UnderlyingIndexName>Account_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="25" parent="13" name="hid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="13" name="pwd">
+      <Position>2</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="13" name="create_date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="13" name="hname">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="13" name="city">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <index id="30" parent="13" name="Hotel_id_uindex">
+      <ColNames>hid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="31" parent="13" name="PRIMARY">
+      <ColNames>hid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="32" parent="13" name="Hotel_id_uindex">
+      <ColNames>hid</ColNames>
+      <UnderlyingIndexName>Hotel_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="33" parent="14" name="oid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="14" name="uid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="14" name="hid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="14" name="rid">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="14" name="rnum">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="38" parent="14" name="price">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="39" parent="14" name="money">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="14" name="ctime">
+      <Position>8</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="14" name="stime">
+      <Position>9</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="14" name="etime">
+      <Position>10</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="43" parent="14" name="state">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="44" parent="14" name="pingjia">
+      <Position>12</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <index id="45" parent="14" name="Order_oid_uindex">
+      <ColNames>oid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="14" name="PRIMARY">
+      <ColNames>oid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="47" parent="14" name="Order_oid_uindex">
+      <ColNames>oid</ColNames>
+      <UnderlyingIndexName>Order_oid_uindex</UnderlyingIndexName>
+    </key>
+    <column id="48" parent="15" name="hid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="15" name="rid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="15" name="num">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="15" name="price">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="52" parent="15" name="rname">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <key id="53" parent="15" name="PRIMARY">
+      <ColNames>hid
+rid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="54" parent="15" name="Room_Hotel_id_fk">
+      <ColNames>hid</ColNames>
+      <RefSchemaName>hotelmis</RefSchemaName>
+      <RefTableName>Hotel</RefTableName>
+      <RefColNames>hid</RefColNames>
+      <OnUpdate>update</OnUpdate>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>

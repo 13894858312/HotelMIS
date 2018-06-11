@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="bean.Room" table="Room" schema="HotelMIS">
+        <composite-id mapped="true" class="bean.RoomPK">
+            <key-property name="hid">
+                <column name="hid" sql-type="int(11)"/>
+            </key-property>
+            <key-property name="rid">
+                <column name="rid" sql-type="int(11)"/>
+            </key-property>
+        </composite-id>
+        <property name="num">
+            <column name="num" sql-type="int(11)"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="int(11)"/>
+        </property>
+        <property name="rname">
+            <column name="rname" sql-type="text" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

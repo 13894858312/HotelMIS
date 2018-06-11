@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="bean.Orders" table="Orders" schema="HotelMIS">
+        <id name="oid">
+            <column name="oid" sql-type="int(11)"/>
+        </id>
+        <property name="uid">
+            <column name="uid" sql-type="int(11)"/>
+        </property>
+        <property name="hid">
+            <column name="hid" sql-type="int(11)"/>
+        </property>
+        <property name="rid">
+            <column name="rid" sql-type="int(11)"/>
+        </property>
+        <property name="rnum">
+            <column name="rnum" sql-type="int(11)"/>
+        </property>
+        <property name="price">
+            <column name="price" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="money">
+            <column name="money" sql-type="int(11)"/>
+        </property>
+        <property name="ctime">
+            <column name="ctime" sql-type="date"/>
+        </property>
+        <property name="stime">
+            <column name="stime" sql-type="date"/>
+        </property>
+        <property name="etime">
+            <column name="etime" sql-type="date" not-null="true"/>
+        </property>
+        <property name="state">
+            <column name="state" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="pingjia">
+            <column name="pingjia" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

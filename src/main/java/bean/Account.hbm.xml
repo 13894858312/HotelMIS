@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="bean.Account" table="Account" schema="HotelMIS">
+        <id name="uid">
+            <column name="uid" sql-type="int(11)"/>
+        </id>
+        <property name="pwd">
+            <column name="pwd" sql-type="text"/>
+        </property>
+        <property name="uname">
+            <column name="uname" sql-type="text" not-null="true"/>
+        </property>
+        <property name="tel">
+            <column name="tel" sql-type="char(11)" length="11" not-null="true"/>
+        </property>
+        <property name="logDate">
+            <column name="log_date" sql-type="date"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="int(11)"/>
+        </property>
+    </class>
+</hibernate-mapping>

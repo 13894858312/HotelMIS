@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="HotelMIS:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Hibernate.war">
+      <element id="artifact" artifact-name="HotelMIS:war exploded" />
+    </root>
+  </artifact>
+</component>
